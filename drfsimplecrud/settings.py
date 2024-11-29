@@ -6,7 +6,7 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security settings
-SECRET_KEY = os.environ.get('SECRET_KEY')  # Ensure that the SECRET_KEY is set in your environment
+SECRET_KEY = os.environ.get('SECRET_KEY', 'matias12345')  # Ensure that the SECRET_KEY is set in your environment
 if not SECRET_KEY:
     raise ValueError("SECRET_KEY environment variable not set!")  # Raise an error if SECRET_KEY is not found
 
